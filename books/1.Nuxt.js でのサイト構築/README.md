@@ -81,6 +81,11 @@ Nuxt.js において `layouts` フォルダ内の vue ファイルは、全ペ�
   </div>
 </template>
 
+<script>
+export default {
+}
+</script>
+
 <style>
   .container{
     max-width: 640px;
