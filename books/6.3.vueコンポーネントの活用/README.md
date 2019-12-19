@@ -226,7 +226,7 @@ props の型指定に関する詳細は、[公式ドキュメント](https://jp.
 </template>
 
 <script >
-  import AppBadge from "~/compoennts/Badge.vue"
+  import AppBadge from "~/components/Badge.vue"
   export default {
     // ...
     components: {
