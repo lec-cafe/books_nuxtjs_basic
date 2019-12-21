@@ -26,7 +26,6 @@ $ npx create-nuxt-app my_website
 
 ::: tip 
 npx コマンドの利用には npm のバーションが 5.2 以上である必要があります。
-npm run dev を入力した際エラーになったらnpm installをしてみてください。
 :::
 
 ## Webサイトの制作
