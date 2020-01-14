@@ -114,6 +114,15 @@ https://docs.aws.amazon.com/amplify/latest/userguide/build-settings.html
 
 Previews を有効にすることで Pull Request と連動して Preview 環境を構築することが可能です。
 
+### 環境内でのパス構成
+
+初期状態での pwd は `/codebuild/output/src930812300/src/{app_name}` のような構成で、
+`~/` は `/root/` となっています。
+
+preBuild 内で行った cd は build ステージでも維持されます。
+
+artifacts.baseDirectory の 相対パスは、初期状態での pwd からの相対パス指定となります。
+
 ### ブランチ固有のビルド設定
 
 amplify.yml ファイル内では `${ }` を利用して各種環境変数が利用可能です。

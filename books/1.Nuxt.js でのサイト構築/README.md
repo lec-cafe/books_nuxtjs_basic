@@ -14,6 +14,16 @@ Web サイトを SPA で構築することにより、スムーズなページ�
 
 まずは、Nuxt.js の開発環境を構築しましょう。
 
+Nuxt.js の環境構築には Node.js を利用するため、
+Node.js の環境構築が未の場合には、先に以下のURLからインストールを行っておいてください。
+
+https://nodejs.org/ja/download/
+
+::: tip
+手元の Node.js のバージョンは `node -v`で確認可能です。
+Node.js のバージョンが古い場合にも、新しい Node.js のインストールを進めておきましょう。
+:::
+
 Nuxt.js でアプリケーション開発を始めるためには、まず npx コマンドを利用して、
 アプリケーションの雛形を作成します。
 
@@ -21,12 +31,39 @@ Nuxt.js でアプリケーション開発を始めるためには、まず npx �
 $ npx create-nuxt-app my_website
 ```
 
-ファイルが展開されたら、作成されたフォルダ内に移動して `npm run dev` コマンドを実行すれば、
-開発用のWebサーバが立ち上がります。
+コマンドを入力すると、対話形式でプロジェクトの作成が進みます。
+一旦デフォルトの選択でOKですので Enter を連打して、選択肢を進めてください。
+しばらくすると、ダウンロードが始まり、プロジェクトの雛形が`my_website` フォルダに作成されます。
+
+yarn がインストールされていない環境では、以下のようなエラーが表示されると思います。
+
+```text
+Installing packages with yarnTrace: Error: spawn yarn ENOENT
+  at Process.ChildProcess._handle.onexit (internal/child_process.js:264:19)
+  at onErrorNT (internal/child_process.js:456:16)
+  at processTicksAndRejections (internal/process/task_queues.js:81:21) {
+ errno: 'ENOENT',
+ code: 'ENOENT',
+ syscall: 'spawn yarn',
+ path: 'yarn',
+ spawnargs: [ 'install' ]
+}
+```
+
+このような場合には以下のコマンドで、yarn のインストールを行ってください。
+
+```bash
+$ npm -g i yarn 
+```
 
 ::: tip 
-npx コマンドの利用には npm のバーションが 5.2 以上である必要があります。
+`npm -g i yarn` を実行した時に、EACCESS のエラーが表示される場合は、
+[こちら](https://qiita.com/okohs/items/ced3c3de30af1035242d) の記事を参考に権限を調整するか、
+`sudo npm -g i yarn` コマンドを実行して インストールを完了させてください。
 :::
+
+ファイルが展開されたら、作成されたフォルダ内に移動して `npm run dev` コマンドを実行すれば、
+開発用のWebサーバが立ち上がります。
 
 ::: tip 
 `npm run dev` コマンドでエラーが表示された際には、`npm i` コマンドを実行して、
