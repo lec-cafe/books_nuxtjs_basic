@@ -1,4 +1,4 @@
-# 9.1.Amplify Consoleでのデプロイ
+# Amplify Consoleでのデプロイ
 
 Amplify Console は、 Amazon の提供する静的ファイルのホスティングサービスです。
 

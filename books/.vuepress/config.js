@@ -57,6 +57,8 @@ module.exports = {
             title: '補足資料',
             children: [
               '/9.1.AmplifyConsoleでのデプロイ/',
+              '/9.2.axios モジュールの使いかた/',
+              '/9.3.Vuex のモジュール化/',
             ]
           },
         ],
